@@ -1,5 +1,12 @@
-const getAllRestaurants = () => {
-  return;
+const { pool } = require("../database/db");
+
+const getAllRestaurants = async () => {
+  try {
+    const [rows] = await pool.query("SELECT * FROM restaurants");
+    return rows;
+  } catch (err) {
+    throw err;
+  }
 };
 
 const getOneRestaurant = () => {

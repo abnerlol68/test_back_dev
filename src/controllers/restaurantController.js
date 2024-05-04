@@ -1,8 +1,13 @@
 const restaurantService = require("../services/restaurantService");
 
-const getAllRestaurants = (req, res) => {
-  const allRestaurants = restaurantService.getAllRestaurants();
-  res.send("Get all Restaurants");
+const getAllRestaurants = async (_req, res) => {
+  try {
+    const allRestaurants = await restaurantService.getAllRestaurants();
+    res.json({ message: "Restaurants info", data: allRestaurants });
+  } catch (err) {
+    console.error(err);
+    res.status(400).json({ message: "Restaurants not found" });
+  }
 };
 
 const getOneRestaurant = (req, res) => {

@@ -1,0 +1,396 @@
+{
+	"info": {
+		"_postman_id": "52c7eb76-cec4-4207-9d5a-e230b0b5465e",
+		"name": "test_back_dev",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "16107030"
+	},
+	"item": [
+		{
+			"name": "Local Requests",
+			"item": [
+				{
+					"name": "Task 1",
+					"item": [
+						{
+							"name": "Read All",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{URL}}api/v1/restaurant",
+									"host": [
+										"{{URL}}api"
+									],
+									"path": [
+										"v1",
+										"restaurant"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Read One",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{URL}}api/v1/restaurant/2631642f-b741-4604-9c35-f84216b27b3d",
+									"host": [
+										"{{URL}}api"
+									],
+									"path": [
+										"v1",
+										"restaurant",
+										"2631642f-b741-4604-9c35-f84216b27b3d"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Create",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"rating\": \"3\",\r\n    \"name\": \"Eden garden\",\r\n    \"site\": \"https://esteban.com.mx\",\r\n    \"email\": \"abner@email.com\",\r\n    \"phone\": \"509.051.989\",\r\n    \"street\": \"93160 Xairo Belmonte Vía\",\r\n    \"city\": \"Ciudad Obregón Emmanuel\",\r\n    \"state\": \"Jalisco\",\r\n    \"lat\": \"19.439100216425\",\r\n    \"lng\": \"-99.1246991701265\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{URL}}api/v1/restaurant",
+									"host": [
+										"{{URL}}api"
+									],
+									"path": [
+										"v1",
+										"restaurant"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update",
+							"request": {
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"rating\": \"3\",\r\n    \"name\": \"Eden Alterrrr\",\r\n    \"site\": \"https://esteban.com.mx\",\r\n    \"email\": \"abner@email.com\",\r\n    \"phone\": \"509.051.989\",\r\n    \"street\": \"93160 Xairo Belmonte Vía\",\r\n    \"city\": \"Ciudad Obregón Emmanuel\",\r\n    \"state\": \"Jalisco\",\r\n    \"lat\": \"19.439100216425\",\r\n    \"lng\": \"-99.1246991701265\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{URL}}api/v1/restaurant/24d7d182-fad7-4672-a0e6-9d247714f170",
+									"host": [
+										"{{URL}}api"
+									],
+									"path": [
+										"v1",
+										"restaurant",
+										"24d7d182-fad7-4672-a0e6-9d247714f170"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{URL}}api/v1/restaurant/71dde54a-d3d9-4c17-8111-bf55ff9b70bd",
+									"host": [
+										"{{URL}}api"
+									],
+									"path": [
+										"v1",
+										"restaurant",
+										"71dde54a-d3d9-4c17-8111-bf55ff9b70bd"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Task 2",
+					"item": [
+						{
+							"name": "Restaurants Data in Area",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{URL}}api/v1/restaurants/statistics?latitude=19.4396650326257&longitude=-99.1324215899109&radius=0.7",
+									"host": [
+										"{{URL}}api"
+									],
+									"path": [
+										"v1",
+										"restaurants",
+										"statistics"
+									],
+									"query": [
+										{
+											"key": "latitude",
+											"value": "19.4396650326257"
+										},
+										{
+											"key": "longitude",
+											"value": "-99.1324215899109"
+										},
+										{
+											"key": "radius",
+											"value": "0.7"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Test API",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}api/v1",
+							"host": [
+								"{{URL}}api"
+							],
+							"path": [
+								"v1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Remote Requests",
+			"item": [
+				{
+					"name": "Task 1 Copy",
+					"item": [
+						{
+							"name": "Read All",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{LINK}}api/v1/restaurant",
+									"host": [
+										"{{LINK}}api"
+									],
+									"path": [
+										"v1",
+										"restaurant"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Read One",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{LINK}}api/v1/restaurant/2631642f-b741-4604-9c35-f84216b27b3d",
+									"host": [
+										"{{LINK}}api"
+									],
+									"path": [
+										"v1",
+										"restaurant",
+										"2631642f-b741-4604-9c35-f84216b27b3d"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Create",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"rating\": \"3\",\r\n    \"name\": \"Eden garden\",\r\n    \"site\": \"https://esteban.com.mx\",\r\n    \"email\": \"abner@email.com\",\r\n    \"phone\": \"509.051.989\",\r\n    \"street\": \"93160 Xairo Belmonte Vía\",\r\n    \"city\": \"Ciudad Obregón Emmanuel\",\r\n    \"state\": \"Jalisco\",\r\n    \"lat\": \"19.439100216425\",\r\n    \"lng\": \"-99.1246991701265\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{LINK}}api/v1/restaurant",
+									"host": [
+										"{{LINK}}api"
+									],
+									"path": [
+										"v1",
+										"restaurant"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update",
+							"request": {
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"rating\": \"3\",\r\n    \"name\": \"Eden Alterrrr\",\r\n    \"site\": \"https://esteban.com.mx\",\r\n    \"email\": \"abner@email.com\",\r\n    \"phone\": \"509.051.989\",\r\n    \"street\": \"93160 Xairo Belmonte Vía\",\r\n    \"city\": \"Ciudad Obregón Emmanuel\",\r\n    \"state\": \"Jalisco\",\r\n    \"lat\": \"19.439100216425\",\r\n    \"lng\": \"-99.1246991701265\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{LINK}}api/v1/restaurant/24d7d182-fad7-4672-a0e6-9d247714f170",
+									"host": [
+										"{{LINK}}api"
+									],
+									"path": [
+										"v1",
+										"restaurant",
+										"24d7d182-fad7-4672-a0e6-9d247714f170"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{LINK}}api/v1/restaurant/71dde54a-d3d9-4c17-8111-bf55ff9b70bd",
+									"host": [
+										"{{LINK}}api"
+									],
+									"path": [
+										"v1",
+										"restaurant",
+										"71dde54a-d3d9-4c17-8111-bf55ff9b70bd"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Task 2 Copy",
+					"item": [
+						{
+							"name": "Restaurants Data in Area",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{LINK}}api/v1/restaurants/statistics?latitude=19.4396650326257&longitude=-99.1324215899109&radius=0.7",
+									"host": [
+										"{{LINK}}api"
+									],
+									"path": [
+										"v1",
+										"restaurants",
+										"statistics"
+									],
+									"query": [
+										{
+											"key": "latitude",
+											"value": "19.4396650326257"
+										},
+										{
+											"key": "longitude",
+											"value": "-99.1324215899109"
+										},
+										{
+											"key": "radius",
+											"value": "0.7"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Test API Copy",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{LINK}}api/v1",
+							"host": [
+								"{{LINK}}api"
+							],
+							"path": [
+								"v1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "URL",
+			"value": "http://localhost:8080/",
+			"type": "string"
+		},
+		{
+			"key": "LINK",
+			"value": "https://test-back-dev-abner-eb528060359e.herokuapp.com/",
+			"type": "string"
+		}
+	]
+}

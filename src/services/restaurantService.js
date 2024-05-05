@@ -78,6 +78,15 @@ const deleteOneRestaurant = async (restaurantId) => {
   }
 };
 
+const getCoorsAndRatings = async () => {
+  try {
+    const [rows] = await pool.query("SELECT rating, lat, lng FROM restaurants");
+    return rows;
+  } catch (err) {
+    throw err;
+  }
+};
+
 module.exports = {
   getAllRestaurants,
   getOneRestaurant,
@@ -85,4 +94,5 @@ module.exports = {
   createNewRestaurant,
   updateOneRestaurant,
   deleteOneRestaurant,
+  getCoorsAndRatings,
 };
